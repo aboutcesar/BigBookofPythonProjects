@@ -4,6 +4,7 @@ print("Guess the secret Number. 3 Digits")
 print("Fermi = Correct digit Correct palce/nPico = Correct Digit and wrong place/n Bagels = No Correct digits")
 print("You have 10 Tries")
 
+maxtries = 10
 
 threeDigitNumber = createNumber()
 numberGuess = input("I have thought of a number. Enter a 3 Digit Number:")
