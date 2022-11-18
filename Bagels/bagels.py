@@ -4,14 +4,31 @@ print("Guess the secret Number. 3 Digits")
 print("Fermi = Correct digit Correct palce/nPico = Correct Digit and wrong place/n Bagels = No Correct digits")
 print("You have 10 Tries")
 
-maxtries = 10
+def main():
+    maxtries = 10
+    digits = 3
 
-threeDigitNumber = createNumber()
-numberGuess = input("I have thought of a number. Enter a 3 Digit Number:")
+    num_tries = 1
+    #run while numtries < 10
+    while True:
+    threeDigitNumber = createNumber()
+    numberGuess = ' '
 
+        while num_tries < maxtries:
+    
+            print("Enter a guess, it has to be {digits} digits")
+            numberGuess = input("> ")
 
+            if len(numberGuess) != digits:
+                print("Your guess is not {digits} Digits long.\nPlease enter another guess")
 
-
+            
+            if numberGuess == threeDigitNumber:
+                print("you guessed it! The number was {threeDigitNumber}")
+        
+    
+    
+    
 def createNumber():
     newNumber = random.randint(100,999)
 
@@ -27,16 +44,18 @@ def isValidNumber(numberGuess):
         continue
 
     clues = [] 
-    for num in threeDigitNumber:
-        if  == index(numberGuess):
-            print("Fermi")
-            continue
-        if num in numberGuess:
-            print("Pico")
-            continue
-        else:
-            print("Bagels")
-            continue
+    for num in range(threeDigitNumber):
+        if  numberGuess[i] == threeDigitNumber[i]:
+            clues.append("Fermi")  
+        if numberGuess[i] in threeDigitNumber:
+            clues.append("Pico")
+    else:
+        clues.append("Bagels")
+
+    return ' '.join(clues)
+
+
+    
 
     
 
