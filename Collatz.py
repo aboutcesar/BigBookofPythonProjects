@@ -16,13 +16,12 @@ while True:
         sys.exit()
     if collatz%2==0:
         collatz = collatz/2
-        print(collatz, end = '')
     else:
         collatz = (collatz*3)+1
-        print(collatz, end = '')
 
     sequence.append(collatz)
-    print(sequence)
+    
+print(sequence)
         
     
     
